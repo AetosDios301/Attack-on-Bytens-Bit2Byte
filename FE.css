@@ -17,6 +17,25 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'Samarkan';
+  src: url('fonts/SAMAN___.TTF') format('truetype');
+}
+
+body {
+  font-family: 'Samarkan', sans-serif;
+  background-color: #f8f8ff; /* Light lavender background */
+}
+
+.company-name {
+  font-family: 'Samarkan', sans-serif;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #8a2be2; /* Deep lavender color for company name */
+}
+
 img {
   width: 100%;
   pointer-events: none;
@@ -30,19 +49,14 @@ img {
   grid-template-columns: 45% 50%;
   place-items: center;
   gap: 50px;
-  background: rgb(67, 69, 112);
-  background: radial-gradient(
-    circle,
-    rgba(67, 69, 112, 1) 3%,
-    rgba(35, 36, 57, 1) 60%
-  );
+  background: #fff; /* White background */
   overflow: hidden;
   padding-top: 100px;
   padding: 130px 80px;
 }
 
 .description {
-  color: #fff;
+  color: #4b0082; /* Indigo color for text */
   padding: 0 50px;
 }
 
@@ -57,11 +71,9 @@ img {
   font-family: "Tilt Neon", sans-serif;
   background-image: linear-gradient(
     90deg,
-    rgb(118, 167, 63) 0%,
-    rgb(51, 143, 118) 40%,
-    rgb(55, 141, 167) 50%,
-    rgb(117, 152, 242) 70%,
-    rgb(144, 118, 236) 100%
+    #8a2be2 0%, /* Deep lavender */
+    #9370db 40%, /* Medium purple */
+    #e6e6fa 100% /* Lavender */
   );
   color: transparent;
   background-size: contain;
@@ -89,27 +101,27 @@ input {
   background-color: transparent;
   outline: transparent;
   border: 0;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid #8a2be2; /* Deep lavender */
   margin-right: 10px;
   transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
 }
 
 input::placeholder {
-  color: rgb(117, 152, 242);
+  color: #9370db; /* Medium purple */
   opacity: 0.5;
   font-weight: 500;
 }
 
 input[type="email"] {
-  color: rgba(255, 255, 255, 0.7);
+  color: #4b0082; /* Indigo */
   font-weight: 500;
   font-size: 1rem;
 }
 
 input[type="email"]:focus {
   border: transparent;
-  outline: 2px dotted rgb(117, 152, 242);
+  outline: 2px dotted #9370db; /* Medium purple */
   outline-offset: -3px;
 }
 
@@ -121,11 +133,9 @@ input[type="email"]:focus {
   max-width: max-content;
   background: linear-gradient(
     90deg,
-    rgb(118, 167, 63) 0%,
-    rgb(51, 143, 118) 40%,
-    rgb(55, 141, 167) 50%,
-    rgb(117, 152, 242) 70%,
-    rgb(144, 118, 236) 100%
+    #8a2be2 0%, /* Deep lavender */
+    #9370db 50%, /* Medium purple */
+    #e6e6fa 100% /* Lavender */
   );
   background-size: 200%;
   background-position: left;
@@ -135,7 +145,7 @@ input[type="email"]:focus {
   border: 0;
   padding: 12px 16px;
   border-radius: 5px;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5),
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1),
     inset 0px 2px 2px rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: all 0.3s ease-in;
@@ -155,7 +165,7 @@ input[type="email"]:focus {
 .item {
   max-width: 200px;
   aspect-ratio: 1/1;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5),
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1),
     inset 0px 2px 2px rgba(255, 255, 255, 0.2);
   animation: fadeIn 0.5s linear 1 forwards;
   animation-delay: calc(0.2s * var(--i));
@@ -163,7 +173,7 @@ input[type="email"]:focus {
 }
 
 .item:nth-child(1) {
-  background-color: #67d7e1;
+  background-color: #e6e6fa; /* Lavender */
   border-radius: 50% 50% 0 50%;
 }
 
@@ -172,7 +182,7 @@ input[type="email"]:focus {
 }
 
 .item:nth-child(3) {
-  background-color: #6cc164;
+  background-color: #d8bfd8; /* Thistle */
   border-radius: 50%;
 }
 
@@ -185,7 +195,7 @@ input[type="email"]:focus {
 }
 
 .item:nth-child(6) {
-  background-color: #8071a8;
+  background-color: #dda0dd; /* Plum */
   border-radius: 0 50% 50% 50%;
 }
 
@@ -194,12 +204,12 @@ input[type="email"]:focus {
 }
 
 .item:nth-child(8) {
-  background-color: #fe7519;
+  background-color: #ba55d3; /* Medium Orchid */
   border-radius: 50% 0 0 50%;
 }
 
 .item:nth-child(9) {
-  background-color: #f5bec3;
+  background-color: #9370db; /* Medium Purple */
   border-radius: 0 50% 50% 0;
 }
 
@@ -208,7 +218,7 @@ input[type="email"]:focus {
 }
 
 .item:nth-child(11) {
-  background-color: #fcd659;
+  background-color: #8a2be2; /* Blue Violet */
   border-radius: 50% 0 50% 50%;
 }
 
@@ -237,12 +247,7 @@ input[type="email"]:focus {
   gap: 20px;
   width: 100%;
   min-height: 100vh;
-  background: rgb(67, 69, 112);
-  background: radial-gradient(
-    circle,
-    rgba(67, 69, 112, 1) 3%,
-    rgba(35, 36, 57, 1) 60%
-  );
+  background: #fff; /* White background */
   overflow: hidden;
   padding: 60px 50px 20px;
 }
@@ -255,7 +260,7 @@ input[type="email"]:focus {
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5),
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1),
     inset 0px 2px 2px rgba(255, 255, 255, 0.2);
   cursor: grab;
 }
@@ -267,7 +272,7 @@ input[type="email"]:focus {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(9, 1fr);
   padding: 20px;
-  background: rgba(104, 104, 104, 0.5);
+  background: rgba(230, 230, 250, 0.5); /* Light lavender background */
   user-select: none;
 }
 
@@ -280,15 +285,11 @@ input[type="email"]:focus {
   border-radius: inherit;
   background: conic-gradient(
     from var(--gradient-angle),
-    rgb(109, 186, 22),
-    rgb(30, 119, 95),
-    rgb(55, 141, 167),
-    rgb(59, 91, 174),
-    rgb(144, 118, 236),
-    rgb(59, 91, 174),
-    rgb(55, 141, 167),
-    rgb(30, 119, 95),
-    rgb(109, 186, 22)
+    #8a2be2, /* Deep lavender */
+    #9370db, /* Medium purple */
+    #e6e6fa, /* Lavender */
+    #9370db, /* Medium purple */
+    #8a2be2 /* Deep lavender */
   );
   animation: rotation 8s linear infinite;
 }
@@ -313,12 +314,12 @@ input[type="email"]:focus {
   margin-bottom: 20px;
   user-select: none;
   object-fit: cover;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .content h1 {
   font-size: 1.2rem;
-  color: #fff;
+  color: #4b0082; /* Indigo */
   text-align: center;
   grid-row: 5 / 6;
 }
@@ -326,20 +327,20 @@ input[type="email"]:focus {
 .content p {
   font-size: 1rem;
   font-weight: 400;
-  color: #fff;
+  color: #4b0082; /* Indigo */
   grid-row: 6 / 9;
 }
 
 .btn-grad {
   background-image: linear-gradient(
     to right,
-    #ece9e6 0%,
+    #e6e6fa 0%, /* Lavender */
     #ffffff 51%,
-    #ece9e6 100%
+    #e6e6fa 100% /* Lavender */
   );
   padding: 8px 12px;
-  color: #000;
-  box-shadow: 0 0 5px #eee;
+  color: #4b0082; /* Indigo */
+  box-shadow: 0 0 5px #e6e6fa; /* Lavender */
   outline: 0;
   font-size: 0.9rem;
   font-weight: 400;
@@ -363,8 +364,8 @@ input[type="email"]:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #559b9a, #3b3d8a);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5),
+  background: linear-gradient(to bottom, #9370db, #8a2be2); /* Medium purple to Deep lavender */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
     inset 0px 4px 4px rgba(255, 255, 255, 0.2);
   padding: 12px;
   border-radius: 50%;
@@ -378,7 +379,7 @@ input[type="email"]:focus {
   position: absolute;
   content: "";
   inset: 0;
-  background: linear-gradient(to right, #559b9a, #3b3d8a);
+  background: linear-gradient(to right, #9370db, #8a2be2); /* Medium purple to Deep lavender */
   border-radius: 50%;
   z-index: -1;
   transition: all 0.5s ease-in;
@@ -387,6 +388,45 @@ input[type="email"]:focus {
 
 .control li:hover::before {
   opacity: 1;
+}
+
+/* Updated navbar styles */
+nav {
+  width: 100%;
+  background-color: #fff; /* White background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+nav ul li {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  color: #4b0082; /* Indigo color for text */
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+nav ul li:hover {
+  background: #e6e6fa; /* Light lavender background on hover */
+}
+
+.active {
+  color: #8a2be2; /* Deep lavender for active item */
 }
 
 @media (max-width: 1215px) {
@@ -446,7 +486,6 @@ input[type="email"]:focus {
   }
 }
 
-
 @media (max-width: 460px) {
    .home {
     gap: 0;
@@ -456,94 +495,4 @@ input[type="email"]:focus {
   #form {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    margin-top: 20px;
-  }
-  
-  input[type="email"]:focus {
-    outline-offset: 6px;
-  }
-
-}
-
-
-/* #bg{
-  position:fixed;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-background: #38a8d1;
-background: -moz-linear-gradient(top,  #38a8d1 0%, #34bc9a 36%, #34bc9a 57%, #8645f7 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#38a8d1), color-stop(36%,#34bc9a), color-stop(57%,#34bc9a), color-stop(100%,#8645f7));
-background: -webkit-linear-gradient(top,  #38a8d1 0%,#34bc9a 36%,#34bc9a 57%,#8645f7 100%);
-background: -o-linear-gradient(top,  #38a8d1 0%,#34bc9a 36%,#34bc9a 57%,#8645f7 100%);
-background: -ms-linear-gradient(top,  #38a8d1 0%,#34bc9a 36%,#34bc9a 57%,#8645f7 100%);
-background: linear-gradient(to bottom,  #38a8d1 0%,#34bc9a 36%,#34bc9a 57%,#8645f7 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#38a8d1', endColorstr='#8645f7',GradientType=0 );
-} */
-
-
-/* General navbar styles */
-.sec1 {
-  position: relative;
-  width: 640px;
-  margin: 50px auto;
-}
-
-
-
-/* Position the bg div */
-#bg {
-  width: 100px;
-  height: 100px;
-  background-color: #f0f0f0;
-  position: absolute; /* Allows precise positioning */
-  top: 50%; /* Vertically center */
-  left: 50%; /* Horizontally center */
-  transform: translate(-50%, -50%); /* Adjusts positioning to be truly centered */
-}
-
-
-
-.active {
-  color: rgba(55, 186, 177, 1);
-}
-
-
-
-/* General navbar styles */
-nav {
-  width: 100%;
-  background-color: rgba(67, 69, 112, 1); /* Same color as the background */
-  position: fixed; /* Makes the navbar stick to the top */
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Ensures the navbar is always on top */
-  padding: 10px 0;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-around; /* Evenly spaces the nav items */
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav ul li {
-  font-family: "Nunito", sans-serif;
-  font-size: 1.2rem;
-  color: #fff;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-nav ul li:hover {
-  background: rgba(255, 255, 255, 0.1); /* Light hover effect */
-}
-
-.active {
-  color: rgb(55, 186, 177); /* Color for the active menu item */
-}
+    gap: 30px
