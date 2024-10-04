@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 0 25px; /* Increased margin for more spacing */
+    text-decoration: none;
+    color: white;
+}
+
+.theme-toggle button {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    flex-grow: 1;
+}
+
+.left-content img {
+    width: 300px;
+    height: 200px;
+    margin: 10px 0;
+    object-fit: cover;
+}
+
+.right-content {
+    background-color: #fff;
+    padding: 40px; /* Increased padding for a larger box */
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Fixed width for the login box */
+}
+
+.right-content h2 {
+    margin-bottom: 20px;
+}
+
+.right-content input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.right-content button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.right-content button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+}

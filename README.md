@@ -6,6 +6,6 @@ This is the official repository of the team Attack on Bytens
 - Aakash Dhamjia
 - Pushpendra Singh
 
-We have chosen the problem statement 2.2 in the EdTech category titled "Gamified Learning for K-12 Students"
+We have chosen the problem statement 4.7 in the Fashion Category titled "Custom Tailoring Platform"
 
-Our project is named "Edventure"
+Our project is named "Darji"
