@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurements Form</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F5F5F5;
+        }
+
+        /* Container styling */
+        .form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 450px;
+            text-align: center;
+        }
+
+        /* Heading styling */
+        .form-container h2 {
+            color: #6B52AE;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Flexbox styling for input fields */
+        .input-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        /* Input fields styling */
+        .input-group input {
+            width: 48%; /* Adjusted width for two columns */
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #F8F8FF;
+            transition: border-color 0.3s ease;
+        }
+
+        /* Focus effect on input */
+        .input-group input:focus {
+            border-color: #6B52AE;
+            outline: none;
+        }
+
+        /* Button styling */
+        .submit-button, .back-button {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center; /* Center the text */
+            transition: background-color 0.3s ease;
+        }
+
+        /* Submit button styling */
+        .submit-button {
+            background-color: #6B52AE;
+        }
+
+        /* Back button styling */
+        .back-button {
+            background-color: #F44336; /* Red background for back button */
+        }
+
+        /* Hover effect on buttons */
+        .submit-button:hover {
+            background-color: #553C92;
+        }
+        .back-button:hover {
+            background-color: #D32F2F; /* Darker red */
+        }
+
+        /* Select field for unit styling */
+        .unit-select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #F8F8FF;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Measurements</h2>
+        <form>
+            <!-- Single dropdown for unit selection -->
+            <select class="unit-select" required>
+                <option value="cm">Centimeters (cm)</option>
+                <option value="in">Inches (in)</option>
+            </select>
+
+            <div class="input-group">
+                <input type="number" placeholder="Chest" required>
+                <input type="number" placeholder="Neck circumference" required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" placeholder="Arm circumference" required>
+                <input type="number" placeholder="Waist circumference" required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" placeholder="Shoulder" required>
+                <input type="number" placeholder="Waist" required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" placeholder="Hip" required>
+                <input type="number" placeholder="Front Length" required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" placeholder="Waist to ankle length" required>
+                <input type="number" placeholder="Hip circumference" required>
+            </div>
+
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="button" class="back-button" onclick="window.history.back()">Back</button>
+        </form>
+    </div>
+
+</body>
+</html>
