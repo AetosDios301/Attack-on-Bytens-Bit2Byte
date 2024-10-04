@@ -1,4 +1,4 @@
-👋 Hello!
+👋 # Hello!
 
 This is the official repository of the team Attack on Bytens
 
