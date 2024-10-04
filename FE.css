@@ -23,17 +23,39 @@ html {
 }
 
 body {
-  font-family: 'Samarkan', sans-serif;
+  font-family: 'Nunito', sans-serif;
   background-color: #f8f8ff; /* Light lavender background */
 }
 
-.company-name {
+.brand-name {
   font-family: 'Samarkan', sans-serif;
-  font-size: 24px;
-  position: absolute;
+  font-size: 28px;
+  position: fixed;
   top: 10px;
-  left: 10px;
-  color: #8a2be2; /* Deep lavender color for company name */
+  left: 20px;
+  color: #8a2be2; /* Deep lavender color for brand name */
+  z-index: 1001; /* Ensure it's above the navbar */
+  font-weight: bold;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-img {
+  background-image: url('https://i.ibb.co/CzPpZDt/darjilogo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 420px;
+  width: 300px;
+  height: 50px;
 }
 
 img {
@@ -51,8 +73,7 @@ img {
   gap: 50px;
   background: #fff; /* White background */
   overflow: hidden;
-  padding-top: 100px;
-  padding: 130px 80px;
+  padding: 130px 80px 80px; /* Adjusted top padding */
 }
 
 .description {
@@ -106,6 +127,12 @@ input {
   transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
 }
+
+.container {
+    max-width: fit-content;
+    margin:auto;
+    padding: 10px;
+  }
 
 input::placeholder {
   color: #9370db; /* Medium purple */
@@ -184,13 +211,7 @@ input[type="email"]:focus {
 .item:nth-child(3) {
   background-color: #d8bfd8; /* Thistle */
   border-radius: 50%;
-}
-
-.item:nth-child(4) {
-  border-radius: 0 0 0 50%;
-}
-
-.item:nth-child(5) {
+}https://i.ibb.co/CzPpZDt/darjilogo.png
   border-radius: 0 50% 50% 0;
 }
 
@@ -395,25 +416,40 @@ nav {
   width: 100%;
   background-color: #fff; /* White background */
   position: fixed;
+  text-decoration: none !   ;
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 10px 0;
+  padding: 15px 0; /* Increased padding to make room for the brand name */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
 nav ul {
   display: flex;
   justify-content: center;
+  text-decoration: none;
   margin: 0;
   padding: 0;
   list-style: none;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+.btnLogin-popup {
+  background-color: #d3b5ff; /* Deep lavender button color */
+  color: #fff; /* White text color */
+  padding: 8px 12px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
 nav ul li {
   font-family: "Nunito", sans-serif;
+  text-decoration: none;
   font-size: 1.2rem;
   color: #4b0082; /* Indigo color for text */
   padding: 10px 20px;
@@ -439,7 +475,7 @@ nav ul li:hover {
   .home {
     grid-template-columns: 45% 50%;
     gap: 50px;
-    padding: 140px 50px;
+    padding: 140px 50px 50px;
   }
 
   .btn {
@@ -451,7 +487,7 @@ nav ul li:hover {
   .home {
     grid-template-columns: 45% 50%;
     gap: 60px;
-    padding: 130px 70px;
+    padding: 130px 70px 70px;
   }
   
   .users-color-container {
@@ -486,13 +522,5 @@ nav ul li:hover {
   }
 }
 
-@media (max-width: 460px) {
-   .home {
-    gap: 0;
-    padding: 30px 40px;
-  }
-  
-  #form {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px
+@media (max-width: 768px) {
+  .brand-name {
