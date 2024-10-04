@@ -152,6 +152,43 @@
             <button type="button" class="back-button" onclick="window.history.back()">Back</button>
         </form>
     </div>
+    <script>
+        document.querySelector('.form-container form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const unit = document.querySelector('.unit-select').value;
+    const measurements = {
+        chest: document.querySelector('input[placeholder="Chest"]').value,
+        neck: document.querySelector('input[placeholder="Neck circumference"]').value,
+        arm: document.querySelector('input[placeholder="Arm circumference"]').value,
+        waist: document.querySelector('input[placeholder="Waist circumference"]').value,
+        shoulder: document.querySelector('input[placeholder="Shoulder"]').value,
+        hip: document.querySelector('input[placeholder="Hip"]').value,
+        frontLength: document.querySelector('input[placeholder="Front Length"]').value,
+        waistToAnkle: document.querySelector('input[placeholder="Waist to ankle length"]').value,
+        hipCircumference: document.querySelector('input[placeholder="Hip circumference"]').value,
+    };
 
+    try {
+        const response = await fetch('/api/measurements', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ unit, measurements }),
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            // Show success message or redirect
+            alert('Measurements submitted successfully!');
+        } else {
+            // Show error message
+            alert(data.message);
+        }
+    } catch (error) {
+        console.error('Error submitting measurements:', error);
+    }
+});
+    </script>
 </body>
 </html>
