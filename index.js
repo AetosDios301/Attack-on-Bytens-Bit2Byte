@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb+srv://aakash014_:7HetDXHoTecY2vR9@cluster0.0ydqm.mongodb.net/', {
+mongoose.connect('', {
 }).then(() => {
   console.log('Connected to MongoDB');
 }).catch((error) => {
@@ -118,6 +118,49 @@ app.get('/', (req, res) => {
 });
 
 
+
+
+
+
+app.post('/gps-location', (req, res) => {
+  const { latitude, longitude } = req.body;
+
+  
+  console.log('Received GPS coordinates:', latitude, longitude);
+
+  
+  const newLocation = new Location({
+    latitude: latitude,
+    longitude: longitude,
+    timestamp: new Date()
+  });
+
+  newLocation.save((err) => {
+    if (err) {
+      res.status(500).send('Error saving location');
+    } else {
+      res.status(200).send('Location saved successfully');
+    }
+  });
+});
+
+const locationSchema = new mongoose.Schema({
+  latitude: Number,
+  longitude: Number,
+  timestamp: Date
+});
+
+const Location = mongoose.model('Location', locationSchema);
+
+
+
+
+
 app.listen(3001, () => {
   console.log('Server is running on port 3001');
 });
+
+
+
+
+
