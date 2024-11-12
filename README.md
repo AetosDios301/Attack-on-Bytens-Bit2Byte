@@ -49,3 +49,6 @@ git push origin your-feature-branch
 - Create a Pull Request (PR): Only after verifying everything is good, open a pull request from your branch in your forked repository to the main branch of the original repository. Include a detailed description of your changes and any relevant context in the PR.
 
 - Code Review: Be open to feedback and make any necessary adjustments. Once your PR is reviewed and approved, it will be merged into the main project.
+
+## License
+All Rights Reserved. This project and all associated code are copyrighted and cannot be used, copied, modified, or distributed without explicit permission from the project owner.
